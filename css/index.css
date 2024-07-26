@@ -220,6 +220,22 @@ body {
     transform: rotate(90deg);
 }
 
+.link_topo {
+    text-decoration: none;
+    color: #13f026;
+    position: fixed;
+    left: 10px;
+    bottom: 240px;
+    scroll-behavior: smooth;
+}
+
+#video {
+    text-decoration: none;
+    color: #13f026;
+    font-size: small;
+
+}
+
 #bandeira {
     width: 100px;
 }
@@ -251,7 +267,6 @@ body {
 #navigation-bar img {
     height: 80px;
     position: absolute;
-    ;
     top: 15%;
     left: 2.5%;
     opacity: .8;
