@@ -229,11 +229,23 @@ body {
     scroll-behavior: smooth;
 }
 
-#video {
-    text-decoration: none;
+.quem {
     color: #13f026;
-    font-size: small;
+    font-size: large;
+}
 
+.botao {
+    width: 90px;
+    height: 30px;
+    box-shadow: 0 0 6px 4px #13f026;
+    color: #13f026;
+    background-color: #171717;
+    border-radius: 20px;
+}
+
+.botao:hover,
+.botao:focus {
+    box-shadow: 0 0 10px 4px black;
 }
 
 #bandeira {
