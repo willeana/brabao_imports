@@ -1787,7 +1787,8 @@ Para dispositivos com largura menor, como celular
     }
 
     .popup-service img {
-        width: 95%;
+        width: 520px;
+        margin: auto;
     }
 
     .skill {
