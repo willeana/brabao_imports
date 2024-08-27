@@ -208,3 +208,16 @@ btnScrollTop.addEventListener("click", () => {
     behavior: "smooth",
   });
 });
+
+// Zoom das Imagens
+document.querySelectorAll('.services-content img').forEach(service => {
+  service.onclick = () => {
+    document.querySelector('.popup-service').style.display = 'block';
+    document.querySelector('.popup-service img').src = service.getAttribute('src');
+  }
+});
+
+document.querySelector('.popup-service span').onclick = () => {
+  document.querySelector('.popup-service').style.display = 'none';
+}
+
