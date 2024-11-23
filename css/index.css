@@ -65,11 +65,20 @@ body {
     background: #171717;
     height: 100vh;
     width: 100%;
-    ;
     overflow: hidden;
     animation: scale 1.5s ease;
     position: relative;
     display: block;
+}
+
+#header video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    opacity: 0.2;
 }
 
 #particles {
@@ -733,7 +742,8 @@ body {
 }
 
 /*modo computador*/
-.service-img img {
+.service-img img,
+.mySlides fade img {
     display: inline-block;
     z-index: 2;
     position: relative;
@@ -764,7 +774,7 @@ body {
     position: absolute;
     top: 0;
     right: 10px;
-    font-size: 60px;
+    font-size: 50px;
     font-weight: bolder;
     color: #13f026;
     cursor: pointer;
@@ -776,8 +786,9 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    border-radius: 8px;
-    width: 750px;
+    border-radius: 10px;
+    width: 470px;
+    margin: auto;
     object-fit: cover;
 }
 
@@ -797,9 +808,8 @@ body {
 }
 
 .service-description p {
-    padding: 10px;
     font-weight: 200;
-    font-size: 16px;
+    font-size: 12px;
     opacity: .8;
 }
 
@@ -1580,10 +1590,92 @@ form button:hover {
     list-style: none;
 }
 
+/*Passar pro lado no zoom*/
+* {
+    box-sizing: border-box
+}
+
+body {
+    font-family: Verdana, sans-serif;
+    margin: 0
+}
+
+.mySlides {
+    display: none
+}
+
+img {
+    vertical-align: middle;
+}
+
+/* Container slideshow */
+.slideshow-container {
+    max-width: 90%;
+    max-height: 80%;
+    position: relative;
+    margin: 300px 5px 10px 20px;
+}
+
+/* Botóes próximo anterior */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: #13f026;
+    font-weight: bold;
+    font-size: 30px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Preciona o "próximo botão" à direita */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/*Ao passar o mouse, adiciona uma cor de fundo transparente */
+.prev:hover,
+.next:hover {
+    background-color: rgba(1, 125, 34, 0.8);
+}
+
+/* Animação de desaparecendo */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+/* Em telas menores, diminua o tamanho do texto */
+@media only screen and (max-width: 300px) {
+
+    .prev,
+    .next,
+    .text {
+        font-size: 11px
+    }
+}
+
+/*Fim passar pro lado no zoom*/
+
 /*
 Para dispositivos com largura menor, como celular
 */
-
 @media only screen and (max-width: 550px) {
     .header-content {
         height: 100vh;
@@ -1787,7 +1879,7 @@ Para dispositivos com largura menor, como celular
     }
 
     .popup-service img {
-        width: 520px;
+        width: 420px;
         margin: auto;
     }
 
@@ -2080,7 +2172,7 @@ Para dispositivos com largura menor, como celular
         font-family: poppins;
         font-weight: 400;
         color: whitesmoke;
-        padding: 20px;
+        padding: 70px;
     }
 
     .contect-info-content-line {
@@ -2642,6 +2734,75 @@ para guias e telefones grandes
         display: none;
     }
 
+    /*Passar pro lado no zoom*/
+    * {
+        box-sizing: border-box
+    }
+
+    body {
+        font-family: Verdana, sans-serif;
+        margin: 0
+    }
+
+    .mySlides {
+        display: none
+    }
+
+    img {
+        vertical-align: middle;
+    }
+
+    /* Container slideshow */
+    .slideshow-container {
+        max-width: 90%;
+        position: relative;
+        margin: 300px 5px 10px 20px;
+    }
+
+    /* Botóes próximo anterior */
+    .prev,
+    .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -22px;
+        color: #13f026;
+        font-weight: bold;
+        font-size: 30px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+    }
+
+    /* Preciona o "próximo botão" à direita */
+    .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+    }
+
+    /*Ao passar o mouse, adiciona uma cor de fundo transparente */
+    .prev:hover,
+    .next:hover {
+        background-color: rgba(1, 125, 34, 0.8);
+    }
+
+    /* Animação de desaparecendo */
+    .fade {
+        animation-name: fade;
+        animation-duration: 1.5s;
+    }
+
+    @keyframes fade {
+        from {
+            opacity: .4
+        }
+
+        to {
+            opacity: 1
+        }
+    }
 
 }
 
@@ -2971,5 +3132,75 @@ para guias e telefones grandes
         border: none;
         border-radius: 8px;
         transition: all .4s ease;
+    }
+}
+
+/*Passar pro lado no zoom*/
+* {
+    box-sizing: border-box
+}
+
+body {
+    font-family: Verdana, sans-serif;
+    margin: 0
+}
+
+.mySlides {
+    display: none
+}
+
+img {
+    vertical-align: middle;
+}
+
+/* Container slideshow */
+.slideshow-container {
+    max-width: 90%;
+    position: relative;
+    margin: 300px 5px 10px 20px;
+}
+
+/* Botóes próximo anterior */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: #13f026;
+    font-weight: bold;
+    font-size: 30px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Preciona o "próximo botão" à direita */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/*Ao passar o mouse, adiciona uma cor de fundo transparente */
+.prev:hover,
+.next:hover {
+    background-color: rgba(1, 125, 34, 0.8);
+}
+
+/* Animação de desaparecendo */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
     }
 }

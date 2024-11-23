@@ -1,0 +1,5 @@
+;/*FB_PKG_DELIM*/
+
+__d("BaseHovercardTrigger.react",["cr:3843"],(function(a,b,c,d,e,f,g){"use strict";g["default"]=b("cr:3843")}),98);
+__d("LsFalcoEventEntryPoint",[],(function(a,b,c,d,e,f){"use strict";a="message_actions";b="composer";c="icebreaker";f.messageActions=a;f.composer=b;f.icebreaker=c}),66);
+__d("useDeferredModuleOnReady",["react"],(function(a,b,c,d,e,f,g){"use strict";var h;b=h||d("react");var i=b.useEffect,j=b.useState;function a(b){var c=j(function(){return b.getModuleIfRequireable()}),a=c[0],d=c[1];i(function(){if(a!=null)return;var c=b.onReady(function(a){d(function(){return a})});return function(){c.remove()}},[b,a]);return a}g["default"]=a}),98);
