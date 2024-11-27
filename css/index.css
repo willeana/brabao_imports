@@ -71,16 +71,6 @@ body {
     display: block;
 }
 
-#header video {
-    position: fixed;
-    top: 0;
-    left: 0;
-    object-fit: cover;
-    height: 100%;
-    width: 100%;
-    opacity: 0.2;
-}
-
 #particles {
     position: absolute;
     top: 0;
@@ -1596,7 +1586,22 @@ form button:hover {
     height: 350px;
     padding-top: 6px;
 }
+
 /*FIM BLACK FRIDEY*/
+
+/*VIDEO FUNDO*/
+.canvas,
+.video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    opacity: 0.2;
+}
+
+/*FIM VIDEO FUNDO*/
 
 /*
 Para dispositivos com largura menor, como celular
