@@ -1601,6 +1601,20 @@ form button:hover {
     opacity: 0.2;
 }
 
+#either-gif-or-video video {
+    display: none;
+}
+
+@media (-webkit-video-playable-inline) {
+    #either-gif-or-video img {
+        display: none;
+    }
+
+    #either-gif-or-video video {
+        display: initial;
+    }
+}
+
 /*FIM VIDEO FUNDO*/
 
 /*

@@ -208,6 +208,7 @@ btnScrollTop.addEventListener("click", () => {
     behavior: "smooth",
   });
 });
+// Fim voltar ao Topo
 
 // Zoom das Imagens
 document.querySelectorAll('.services-content img').forEach(service => {
@@ -220,29 +221,34 @@ document.querySelectorAll('.services-content img').forEach(service => {
 document.querySelector('.popup-service span').onclick = () => {
   document.querySelector('.popup-service').style.display = 'none';
 }
+// Fim zoom das Imagens
 
-/*TETE VIDEO*/
-var isIOS = /iPad|iPhone|iPod/.test(navigator.platform);
+//VIDEO DE FUNDO
+var video;
+var canvas;
 
-if (isIOS) {
+function startPlayback() {
+  if (!video) {
+    video = document.createElement('video');
+    video.src = './video/apresentacao - blackgraund.mp4';
+    video.loop = true;
+    video.addEventListener('playing', paintVideo);
+  }
+  video.play();
+}
 
-    var canvasVideo = new CanvasVideoPlayer({
-        videoSelector: '.video',
-        canvasSelector: '.canvas',
-        timelineSelector: false,
-        autoplay: true,
-        makeLoop: true,
-        pauseOnClick: false,
-        audio: false
-    });
-
-}else {
-
-    // Use HTML5 video
-    document.querySelectorAll('.canvas')[0].style.display = 'none';
-
-}   
-
+function paintVideo() {
+  if (!canvas) {
+    canvas = document.createElement('canvas');
+    canvas.width = video.videoWidth;
+    canvas.height = video.videoHeight;
+    document.body.appendChild(canvas);
+  }
+  canvas.getContext('2d').drawImage(video, 0, 0, canvas.width, canvas.height);
+  if (!video.paused)
+    requestAnimationFrame(paintVideo);
+}
+//FIM VIDEO DE FUNDO
 
 
 
